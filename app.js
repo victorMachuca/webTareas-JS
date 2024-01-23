@@ -20,7 +20,7 @@ addBtn.addEventListener("click", (e) => {
                 li.appendChild(addDeleteBtn());//agrega un nodo "button" al elemento padre "li" 
                 ul.appendChild(li); //agrega un nodo "li" al elemento padre "ul"
             
-                input.value = "";
+                input.value = ""; //deja en blanco luego de usar el boton
                 empty.style.display = "none"; //oculta el elemento 
 
         }
@@ -38,8 +38,8 @@ function addDeleteBtn(){
         ul.removeChild(item); //elmimina la lista(ul porque manda en jerarqruia)
     
         const items = document.querySelectorAll('li');//muestra el mensaje Tareas pendientes luego usar el boton borrar
-        if (items.length === 0) {
-            empty.style.display = "block"; //muestra el elemento como un bloque
+        if (items.length === 0) { //comprueba que no hay tareas"
+            empty.style.display = "block"; //vuelve a mostrar el elemento "empty", 
         }
     })
     return deleteBtn;
